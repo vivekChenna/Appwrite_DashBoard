@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppLogo from "../assets/Images/HeaderImages/logo.png";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Context from "../Context/Context";
 
 const Header = () => {
+  const { setIsSideBarOpen } = useContext(Context);
+
   return (
-    <div className=" sticky top-0 h-[65px] border-b border-gray-600 px-[23px] py-[14px] flex items-center justify-between">
+    <div className="h-[65px] border-b border-gray-600 px-[23px] py-[14px] flex items-center md:justify-between md:gap-0 gap-4">
+      <div className=" block md:hidden">
+        <GiHamburgerMenu
+          color="white"
+          cursor="pointer"
+          fontSize="1.2rem"
+          onClick={() => setIsSideBarOpen(true)}
+        />
+      </div>
+
       <div className=" flex items-center">
         <div className=" flex text-lg items-center gap-[6px]">
           <div className=" w-[20px]">
@@ -23,7 +36,7 @@ const Header = () => {
         <p className=" text-white opacity-85">First Appwrite project</p>
       </div>
 
-      <div className=" flex items-center">
+      <div className=" md:flex items-center hidden">
         <div className=" flex items-center gap-6">
           <Link to="#">
             <p className=" opacity-90 text-white text-[14px] font-medium">

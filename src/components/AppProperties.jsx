@@ -37,7 +37,7 @@ const AppProperties = () => {
   ];
 
   return (
-    <div className=" flex flex-wrap w-[60%] gap-8">
+    <div className=" flex md:flex-row flex-col flex-wrap w-[60%] gap-8 md:mx-0 mx-5">
       <SingleProperty data={propertiesData[0]} />
       <SingleProperty data={propertiesData[1]} />
       <SingleProperty data={propertiesData[2]} />

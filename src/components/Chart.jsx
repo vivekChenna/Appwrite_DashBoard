@@ -13,7 +13,7 @@ defaults.plugins.title.color = "#777E8B";
 const Chart = ({ flag }) => {
   return (
     <div
-      className=" w-[500px] h-[225px] border border-gray-600 rounded-2xl bg-[#19191D] bg-opacity-85 px-7 pt-4 pb-10
+      className=" md:w-[500px] w-[400px] h-[225px] border border-gray-600 rounded-2xl bg-[#19191D] bg-opacity-90 px-7 pt-4 pb-10
     "
     >
       {flag === true ? (
