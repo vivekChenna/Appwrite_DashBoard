@@ -11,8 +11,8 @@ defaults.plugins.title.color = "#777E8B";
 
 const FooterChart = () => {
   return (
-    <div className=" w-[305px] rounded-xl border border-gray-600 px-6 py-2
-    ">
+    <div className=" w-[305px] rounded-xl border border-gray-600 px-7 pt-4 pb-10 h-[292px] ">
+      <p className=" text-white text-[28px] font-medium">10</p>
       <Bar
         data={{
           labels: [
